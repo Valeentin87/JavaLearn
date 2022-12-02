@@ -35,3 +35,12 @@ ArrayList - пронумерованный список элементов
 Для того, чтобы не создавать сырой объект класса Object (а сейчас тип данных, который будет храниться в arrayList не указан
 указываем обобщение <Integer> после указания типа объекта
 ArrayList<Integer> arrayList = new ArrayList<Integer>();
+        arrayList.add(2808); // добавление целочисленного элемента в объект типа ArrayList
+        for (Object element: arrayList) { // вывод на экран через цикл foreach
+            System.out.println(element);
+            }
+при этом нельзя будет добавить элемент не типа Integer например
+arrayList.add("1234"); // java: incompatible types: java.lang.String cannot be converted to java.lang.Integer
+ArrayList<Integer> arrayList = new ArrayList<Integer>(10); //создаст ссылку на лист с 10 элементами, который потом может быть расширен
+ArrayList<Integer> arrayList = new ArrayList<Integer>(list1); //создаст ссылку на копию объекта list1
+3. Получение итератора на базе коллекции.

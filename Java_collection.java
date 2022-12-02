@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 
 public class Java_collection {
     public static void main(String[] args) {
@@ -11,10 +11,22 @@ public class Java_collection {
         System.out.println(man.toString());
 
         ArrayList<Integer> arrayList = new ArrayList<Integer>(); // инициализация объекта arrayList класса ArrayList
+
         arrayList.add(2808);
+
         for (Object element: arrayList) {
             System.out.println(element);
         }
+        List<Integer> col = List.of(1,2,3,4); //создание итерируемого объекта
+        Iterator<Integer> iterator = col.iterator(); //создание итератора iterator для итерируемого объекта col типа List
+                                                        // обязательно указаываем тип итератора, он должен соответствовать т
+                                                        // типу итерируемого объекта
+        while(iterator.hasNext()) { // пока имеется следующий элемент
+            System.out.println(iterator.next()); // печатаем этот следующий элемент
+        }
+
+
+
     }
 }
 class People {
